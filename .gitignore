@@ -1,0 +1,13 @@
+# Logs & data
+logs/
+*.log
+*.csv
+
+# Build artifacts
+*.exe
+*.zip
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
