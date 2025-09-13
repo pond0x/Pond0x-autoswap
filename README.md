@@ -1,38 +1,47 @@
 # PondX Autoswap (AHK v2)
 
-AutoHotkey v2 helper for round-trip micro-swaps on pond0x (A→B → Reverse → B→A) with a draggable HUD, control panel, wallet-confirm timing, CSV logging, session breaks, and safety limits.
+AutoHotkey v2 helper for round-trip micro-swaps on **pond0x.com** with a draggable HUD, control panel, and adjustable timing.
 
-> **Requires:** Windows 10/11 • AutoHotkey **v2** (not v1) • a supported wallet (Phantom/Solflare/Backpack…)
+## 🔽 Download
+- **[Get the latest .ahk](../../releases/latest/download/pondx_autoswap_v2.ahk)**  
+- Requires **Windows 10/11** and **AutoHotkey v2** (https://www.autohotkey.com)
 
-## ✨ Features
-- Round-trip flow with **Reverse** click
-- **Control Panel**: set amounts, Swap→Confirm delay, Reverse→Swap delay, cooldowns
-- **HUD**: live swaps, trips, direction, next ETA
-- **Wallet confirm**: detects Phantom/Backpack/Solflare/OKX/Rabby
-- **CSV logging** to `logs/`
-- **Session breaks** after N trips + **max trips** cutoff
-- Hotkeys for quick capture/controls
+## ✅ What it does
+- Round-trip flow (A→B → Reverse → B→A)
+- Control Panel: set **swap amounts**, **delays** (Swap→Wallet, Wallet→SwapAgain, SwapAgain→Swap), **cooldowns**
+- Wallet confirm: supports Phantom/Backpack/Solfare/OKX/Rabby (title match)
+- Draggable **HUD**: shows swaps, next ETA, current leg
+- Safety: random jitter, max trips per session, pause/resume hotkeys
+- Logging: optional CSV
 
-## 🔧 Setup
-1. Install [AutoHotkey v2](https://www.autohotkey.com/).
-2. Open your DEX page (e.g. `pond0x.com/swap/solana`). Keep zoom at **100%**.
-3. Run `pondx_autoswap.ahk` (double-click).
-4. In the Control Panel click:
-   - **Capture Amount**, **Capture Swap**, **Capture Reverse**, **Capture Wallet** (hover each UI target then click the button).
-5. Set amounts (start with **0.25–0.40** per leg) and timings (e.g., Swap→Confirm **2200–3500 ms**).
-6. Press **Start** (or `Ctrl+Alt+S`).
+## 🚀 Quick Start
+1. Install **AutoHotkey v2**.
+2. Download the `.ahk` from the link above and **double-click** it.  
+   Look for the green **H** in the tray and the **Control Panel** window.
+3. Open **pond0x.com/swap/solana** (100% zoom) and connect your wallet.
+4. In the Control Panel:
+   - Pick pair (e.g., **USDC ↔ USDT** or **SOL ↔ USDC**).
+   - Click **Capture Amount** then **type box** (Ctrl+Alt+1).
+   - Click **Capture Swap** then **Swap / Swap Again** (Ctrl+Alt+2).
+   - Click **Capture Reverse** then the **reverse ↕ button** (Ctrl+Alt+3).
+   - Click **Capture Wallet** then **Confirm** in your wallet (Ctrl+Alt+4).
+5. Set your **delays** and **amount ranges**, then press **Start**.
 
 ## ⌨️ Hotkeys
-- Capture: `Ctrl+Alt+1` Amount • `Ctrl+Alt+2` Swap • `Ctrl+Alt+3` Reverse • `Ctrl+Alt+4` Wallet  
-- Control: `Ctrl+Alt+S` Start • `Ctrl+Alt+P` Pause/Resume • `Ctrl+Alt+H` HUD • `Ctrl+Alt+O` Panel • `Ctrl+Alt+Q` Quit
+- **Ctrl+Alt+S** — Start / resume  
+- **Ctrl+Alt+P** — Pause  
+- **Ctrl+Alt+Q** — Quit  
+- **Ctrl+Alt+1..4** — Capture Amount / Swap / Reverse / Wallet  
+- **Ctrl+Alt+H** — Toggle HUD
 
-## 📝 Tips
-- If confirms are slow: increase Swap→Confirm wait (e.g., 2500–4200 ms).
-- If counted rate is low: increase per-leg amounts (e.g., 0.40–0.80) and keep cooldown ≥10s.
-- Use session breaks to avoid soft rate-limits.
+## 🧠 Tips
+- Use **USDC↔USDT** (or **SOL↔USDC**) and keep page zoom at **100%**.
+- If wallet confirm is late, increase **Swap→Wallet delay** (ms).  
+- If confirm is too early, use **“wait for wallet title”** option and/or add **jitter**.
+- For boost counting, prefer **stablecoin round-trips** and space swaps with sensible cooldowns.
 
-## ⚠️ Disclaimer
-This tool automates clicks/keystrokes. **Use at your own risk.** Ensure your usage complies with the website’s Terms of Service and your local laws. The authors provide **no warranty** and are **not responsible** for any loss.
-
-## 📜 License
-MIT — see [LICENSE](./LICENSE).
+## 🛠 Troubleshooting
+- _HUD doesn’t move:_ it’s draggable—grab the title bar.
+- _Hotkeys don’t work:_ ensure AHK v2 (not v1), and the script is running (green H).
+- _Wallet not detected:_ enable the specific wallet in settings or type a custom **window title**.
+- _Clicks off-target:_ recapture points at **100% zoom** and keep the window maximized.
