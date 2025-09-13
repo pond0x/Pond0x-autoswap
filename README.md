@@ -1,5 +1,11 @@
 ## 🔽 Download
 
+-## Download
+**Windows EXE:**  
+[⬇️ Get Pond0x Autoswap](https://github.com/<owner>/<repo>/releases/latest/download/pondx_autoswap_v2.exe)
+
+> No AutoHotkey needed for the EXE. Windows 10/11.
+
 - **Direct link (always the latest):**  
   https://github.com/pond0x/Pond0x-autoswap/releases/latest/download/pondx_autoswap_v2.ahk
 
