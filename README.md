@@ -1,6 +1,6 @@
 ## 🔽 Download
 
--## Download
+-## Download new V
 **Windows EXE:**  
 [⬇️ Get Pond0x Autoswap](https://github.com/<owner>/<repo>/releases/latest/download/pondx_autoswap_v2.exe)
 
