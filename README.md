@@ -13,6 +13,19 @@
 
 ## 🚀 Quick Start
 
+## How to Use
+1. Open https://pond0x.com/swap/solana and connect your wallet.
+2. Run `pondx_autoswap_v2.exe`.
+3. Capture points (hover, then press hotkeys):
+   - **Ctrl+Alt+1** – Amount box
+   - **Ctrl+Alt+2** – Swap / Swap Again
+   - **Ctrl+Alt+3** – Reverse / Swap Again (if you use round-trip)
+   - **Ctrl+Alt+4** – Wallet Confirm button
+4. Set delays in the control panel (Swap→Wallet, Reverse→Swap, cooldown).
+5. Click **Start**.  
+   **Ctrl+Alt+P** pause/resume • **Ctrl+Alt+Q** quit.
+
+
 1) Install **AutoHotkey v2**.  
 2) Download `pondx_autoswap_v2.ahk` (link above) and double-click it.
 3) Open **pond0x.com/swap/solana** in a desktop browser (100% zoom), connect your wallet.
